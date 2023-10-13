@@ -23,10 +23,8 @@ jobs:
           if [[ ${{matrix.provider}} == TFP0 ]]; then
             USE_TFP0=1 make package FINALPACKAGE=1
           elif [[ ${{matrix.provider}} == LIBKRW ]]; then
-            sed -i '' 's/{{.depends}}/libkrw/g' control
             USE_LIBKRW=1 make package FINALPACKAGE=1
           elif [[ ${{matrix.provider}} == LIBKERNRW ]]; then
-            sed -i '' 's/{{.depends}}/libkernrw0/g' control
             USE_LIBKERNRW=1 make package FINALPACKAGE=1
           fi
       - name: Publish artifact
