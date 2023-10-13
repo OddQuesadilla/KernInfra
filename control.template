@@ -1,0 +1,10 @@
+Package: libkernrw0
+Name: KernIfra
+Version: 0.0.1
+Architecture: iphoneos-arm
+Depends: {{.depends}}
+Description: Package for use with fouldecrypt
+Maintainer: quesadilla
+Author: misty
+Section: System
+Tag: role::hacker
